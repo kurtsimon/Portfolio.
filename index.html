@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurt Simon Claridad | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-red-400">Portfolio</h1>
+      <ul class="flex space-x-8 text-lg">
+        <li><button onclick="showSection('home')" class="hover:text-red-400">Home</button></li>
+         <li><button onclick="showSection('socials')" class="hover:text-red-400">Socials</button></li>
+        <li><button onclick="showSection('skills')" class="hover:text-red-400">Skills</button></li>
+        <li><button onclick="showSection('education')" class="hover:text-red-400">Education</button></li>
+        <li><button onclick="showSection('experience')" class="hover:text-red-400">Experience</button></li>
+        <li><button onclick="showSection('contact')" class="hover:text-red-400">Contact</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <main class="pt-24">
+    
+    <!-- Home -->
+    <section id="home" class="section container mx-auto px-6 flex flex-col md:flex-row items-center justify-center min-h-[80vh]">
+      <div class="flex justify-center md:w-1/2">
+        <img src="P.jpg" alt="Kurt Simon Claridad" class="rounded-full w-80 h-80 border-4 border-red-500 object-cover">
+      </div>
+      <div class="md:w-1/2 mt-8 md:mt-0 md:ml-10">
+        <h2 class="text-4xl font-bold mb-4">Hi, It's <span class="text-red-400">Kurt Simon Claridad</span></h2>
+        <h3 class="text-2xl font-semibold mb-6">Bachelor of Science in Information Technology</span></h3>
+        <p class="text-gray-300 mb-6">
+          Highly skilled and detail-oriented with a strong foundation in Information Technology principles. 
+          Proficient in using software and with leadership.
+        </p>
+
+
+        <a href="#" onclick="showSection('contact')" class="bg-red-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-red-500 transition">  
+          Hire Me
+        </a>
+      </div>
+    </section>
+
+    <!-- Socials -->
+    <section id="socials" class="section container mx-auto px-6 hidden min-h-[80vh] text-center">
+      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Socials</h2>
+      <div class="flex flex-col items-center space-y-6 text-gray-300">
+        <a href="https://facebook.com/" target="_blank" class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400 w-full max-w-md flex items-center justify-between">
+          <span class="font-semibold text-lg text-red-400">Facebook:</span>
+          <span>Kurt Simon Claridad</span>
+        </a>
+        <a href="https://instagram.com/vinn_whyy" target="_blank" class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400 w-full max-w-md flex items-center justify-between">
+          <span class="font-semibold text-lg text-red-400">Instagram:</span>
+          <span>vinn_why</span>
+        </a>
+        <a href="https://tiktok.com/@kikurtt" target="_blank" class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400 w-full max-w-md flex items-center justify-between">
+          <span class="font-semibold text-lg text-red-400">TikTok:</span>
+          <span>@kikurtt</span>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="section container mx-auto px-6 hidden min-h-[80vh]">
+      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Skills</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300">
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Project Management</li>
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Public Relations</li>
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Teamwork</li>
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Time Management</li>
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Leadership</li>
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Critical Thinking</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section container mx-auto px-6 hidden min-h-[80vh]">
+      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Education</h2>
+      <ul class="space-y-6 text-gray-300">
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400"> Illuminado Nessia Sr. Elementary School (2014-2015)</li>
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Negros Occidental High School (2016-2020)</li>
+        <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">STI West Negros University (2021-Present)</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section container mx-auto px-6 hidden min-h-[80vh]">
+      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Experience</h2>
+      <div class="space-y-6 text-gray-300">
+        <div>
+          <h3 class="font-bold text-xl text-red-400">Tutok Politika (Encoder) <span class="text-sm text-gray-500">2022-2023</span></h3>
+          <p>Developed and executed marketing strategies, mentored IT teams, and collaborated on projects.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl text-red-400">Programmers Guild (Member) <span class="text-sm text-gray-500">2023-Present</span></h3>
+          <p>Provided support, training, and networking opportunities while fostering a passion for programming.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl text-red-400">National Youth Convention <span class="text-sm text-gray-500">2023-2025</span></h3>
+          <p>Participated in national events, developing leadership and collaboration skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container mx-auto px-6 hidden min-h-[80vh] text-center">
+      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Contact</h2>
+      <p class="mb-4 text-gray-300">📞 09452593623</p>
+      <p class="mb-4 text-gray-300">✉️ <a href="mailto:kurtsimonclaridad00@gmail.com" class="text-red-400 hover:underline">kurtsimonclaridad00@gmail.com</a></p>
+      <p class="mb-4 text-gray-300">📍 Puentevilla 7th Road, Barangay Taculing, Bacolod City.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center text-gray-500 py-6">
+    © 2025 Kurt Simon Claridad | Portfolio
+  </footer>
+
+  <!-- Script to Switch Sections -->
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+      // Show the selected one
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+
+    // Show home on page load
+    showSection('home');
+  </script>
+
+</body>
+</html>
