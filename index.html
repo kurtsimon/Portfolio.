@@ -10,45 +10,49 @@
 
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 shadow-md z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <div class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
       <h1 class="text-2xl font-bold text-red-400">Portfolio</h1>
-      <ul class="flex space-x-8 text-lg">
-        <li><button onclick="showSection('home')" class="hover:text-red-400">Home</button></li>
-         <li><button onclick="showSection('socials')" class="hover:text-red-400">Socials</button></li>
-        <li><button onclick="showSection('skills')" class="hover:text-red-400">Skills</button></li>
-        <li><button onclick="showSection('education')" class="hover:text-red-400">Education</button></li>
-        <li><button onclick="showSection('experience')" class="hover:text-red-400">Experience</button></li>
-        <li><button onclick="showSection('contact')" class="hover:text-red-400">Contact</button></li>
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-btn" class="md:hidden text-red-400 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+      <!-- Navbar Links -->
+      <ul id="navbar-links" class="hidden md:flex space-x-4 md:space-x-8 text-lg absolute md:static top-16 left-0 w-full md:w-auto bg-black md:bg-transparent bg-opacity-95 md:bg-opacity-100 md:shadow-none shadow-lg md:rounded-none rounded-b-lg md:p-0 p-4 z-40">
+        <li><button onclick="showSection('home'); closeMenu()" class="hover:text-red-400 w-full text-left md:text-center">Home</button></li>
+        <li><button onclick="showSection('socials'); closeMenu()" class="hover:text-red-400 w-full text-left md:text-center">Socials</button></li>
+        <li><button onclick="showSection('skills'); closeMenu()" class="hover:text-red-400 w-full text-left md:text-center">Skills</button></li>
+        <li><button onclick="showSection('education'); closeMenu()" class="hover:text-red-400 w-full text-left md:text-center">Education</button></li>
+        <li><button onclick="showSection('experience'); closeMenu()" class="hover:text-red-400 w-full text-left md:text-center">Experience</button></li>
+        <li><button onclick="showSection('contact'); closeMenu()" class="hover:text-red-400 w-full text-left md:text-center">Contact</button></li>
       </ul>
     </div>
   </nav>
 
   <!-- Sections -->
-  <main class="pt-24">
-    
+  <main class="pt-28 md:pt-24">
     <!-- Home -->
-    <section id="home" class="section container mx-auto px-6 flex flex-col md:flex-row items-center justify-center min-h-[80vh]">
+    <section id="home" class="section container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center min-h-[80vh]">
       <div class="flex justify-center md:w-1/2">
-        <img src="P.jpg" alt="Kurt Simon Claridad" class="rounded-full w-80 h-80 border-4 border-red-500 object-cover">
+        <img src="P.jpg" alt="Kurt Simon Claridad" class="rounded-full w-48 h-48 md:w-80 md:h-80 border-4 border-red-500 object-cover">
       </div>
-      <div class="md:w-1/2 mt-8 md:mt-0 md:ml-10">
-        <h2 class="text-4xl font-bold mb-4">Hi, It's <span class="text-red-400">Kurt Simon Claridad</span></h2>
-        <h3 class="text-2xl font-semibold mb-6">Bachelor of Science in Information Technology</span></h3>
-        <p class="text-gray-300 mb-6">
+      <div class="md:w-1/2 mt-8 md:mt-0 md:ml-10 text-center md:text-left">
+        <h2 class="text-2xl md:text-4xl font-bold mb-4">Hi, It's <span class="text-red-400">Kurt Simon Claridad</span></h2>
+        <h3 class="text-lg md:text-2xl font-semibold mb-6">Bachelor of Science in Information Technology</h3>
+        <p class="text-gray-300 mb-6 text-base md:text-lg">
           Highly skilled and detail-oriented with a strong foundation in Information Technology principles. 
           Proficient in using software and with leadership.
         </p>
-
-
-        <a href="#" onclick="showSection('contact')" class="bg-red-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-red-500 transition">  
+        <a href="#" onclick="showSection('contact')" class="bg-red-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-red-500 transition">
           Hire Me
         </a>
       </div>
     </section>
 
     <!-- Socials -->
-    <section id="socials" class="section container mx-auto px-6 hidden min-h-[80vh] text-center">
-      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Socials</h2>
+    <section id="socials" class="section container mx-auto px-4 md:px-6 hidden min-h-[80vh] text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Socials</h2>
       <div class="flex flex-col items-center space-y-6 text-gray-300">
         <a href="https://facebook.com/" target="_blank" class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400 w-full max-w-md flex items-center justify-between">
           <span class="font-semibold text-lg text-red-400">Facebook:</span>
@@ -65,11 +69,10 @@
       </div>
     </section>
 
-
     <!-- Skills -->
-    <section id="skills" class="section container mx-auto px-6 hidden min-h-[80vh]">
-      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Skills</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300">
+    <section id="skills" class="section container mx-auto px-4 md:px-6 hidden min-h-[80vh]">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Skills</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300">
         <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Project Management</li>
         <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Public Relations</li>
         <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Teamwork</li>
@@ -80,8 +83,8 @@
     </section>
 
     <!-- Education -->
-    <section id="education" class="section container mx-auto px-6 hidden min-h-[80vh]">
-      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Education</h2>
+    <section id="education" class="section container mx-auto px-4 md:px-6 hidden min-h-[80vh]">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Education</h2>
       <ul class="space-y-6 text-gray-300">
         <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400"> Illuminado Nessia Sr. Elementary School (2014-2015)</li>
         <li class="bg-gray-900 p-4 rounded-lg shadow hover:shadow-red-400">Negros Occidental High School (2016-2020)</li>
@@ -90,27 +93,27 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="section container mx-auto px-6 hidden min-h-[80vh]">
-      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Experience</h2>
+    <section id="experience" class="section container mx-auto px-4 md:px-6 hidden min-h-[80vh]">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Experience</h2>
       <div class="space-y-6 text-gray-300">
         <div>
-          <h3 class="font-bold text-xl text-red-400">Tutok Politika (Encoder) <span class="text-sm text-gray-500">2022-2023</span></h3>
+          <h3 class="font-bold text-lg md:text-xl text-red-400">Tutok Politika (Encoder) <span class="text-sm text-gray-500">2022-2023</span></h3>
           <p>Developed and executed marketing strategies, mentored IT teams, and collaborated on projects.</p>
         </div>
         <div>
-          <h3 class="font-bold text-xl text-red-400">Programmers Guild (Member) <span class="text-sm text-gray-500">2023-Present</span></h3>
+          <h3 class="font-bold text-lg md:text-xl text-red-400">Programmers Guild (Member) <span class="text-sm text-gray-500">2023-Present</span></h3>
           <p>Provided support, training, and networking opportunities while fostering a passion for programming.</p>
         </div>
         <div>
-          <h3 class="font-bold text-xl text-red-400">National Youth Convention <span class="text-sm text-gray-500">2023-2025</span></h3>
+          <h3 class="font-bold text-lg md:text-xl text-red-400">National Youth Convention <span class="text-sm text-gray-500">2023-2025</span></h3>
           <p>Participated in national events, developing leadership and collaboration skills.</p>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section container mx-auto px-6 hidden min-h-[80vh] text-center">
-      <h2 class="text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Contact</h2>
+    <section id="contact" class="section container mx-auto px-4 md:px-6 hidden min-h-[80vh] text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b-2 border-red-400 inline-block">Contact</h2>
       <p class="mb-4 text-gray-300">📞 09452593623</p>
       <p class="mb-4 text-gray-300">✉️ <a href="mailto:kurtsimonclaridad00@gmail.com" class="text-red-400 hover:underline">kurtsimonclaridad00@gmail.com</a></p>
       <p class="mb-4 text-gray-300">📍 Puentevilla 7th Road, Barangay Taculing, Bacolod City.</p>
@@ -118,22 +121,39 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-center text-gray-500 py-6">
+  <footer class="bg-gray-900 text-center text-gray-500 py-6 text-sm md:text-base">
     © 2025 Kurt Simon Claridad | Portfolio
   </footer>
 
-  <!-- Script to Switch Sections -->
+  <!-- Script to Switch Sections & Navbar Toggle -->
   <script>
     function showSection(sectionId) {
-      // Hide all sections
       document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-      // Show the selected one
       document.getElementById(sectionId).classList.remove('hidden');
     }
-
     // Show home on page load
     showSection('home');
-  </script>
 
+    // Mobile Navbar Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const navbarLinks = document.getElementById('navbar-links');
+    menuBtn.addEventListener('click', () => {
+      navbarLinks.classList.toggle('hidden');
+    });
+    // Close menu after click (for mobile)
+    function closeMenu() {
+      if (window.innerWidth < 768) {
+        navbarLinks.classList.add('hidden');
+      }
+    }
+    // Hide menu on resize if desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        navbarLinks.classList.remove('hidden');
+      } else {
+        navbarLinks.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
